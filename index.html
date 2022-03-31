@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
+
+    <title> CVV CHECKER</title>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600%7CRoboto:400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script>
+  	var myVar=setInterval(function(){myTimer()},1e3);function myTimer(){var e=new Date;document.getElementById("horas").innerHTML=e.toLocaleTimeString()}function Mudaestado(e){var n=document.getElementById(e).style.display;document.getElementById(e).style.display="none"==n?"block":"none"}
+</script>
+<style>
+	.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
+</head>
+
+<body class="content-dark">
+	<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        <!-- /.site-sidebar -->
+        <main class="main-wrapper clearfix">
+            <!-- Page Title Area -->
+            <div class="row page-title clearfix">
+                <div class="page-title-left">
+                    <h6 class="page-title-heading mr-0 mr-r-5">ANONBD</h6>
+                    <p class="page-title-description mr-0 d-none d-md-inline-block"></p>
+                </div>
+                <!-- /.page-title-left -->
+                
+                <!-- /.page-title-right -->
+            </div>
+            <!-- /.page-title -->
+            <!-- =================================== -->
+            <!-- Different data widgets ============ -->
+            <!-- =================================== -->
+            <div class="widget-list row">
+                
+                <!-- /.widget-holder -->
+                <div class="widget-holder widget-full-height widget-flex col-lg-6">
+                    <div class="widget-bg">
+                        <div class="widget-heading">
+                            <h5 class="widget-title">[ANONBD] CHECKER</h5>
+                            <div class="widget-graph-info">
+                                <div class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle text-muted fs-16" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a>  <a class="dropdown-item" href="#">Another action</a>  <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.widget-graph-info -->
+                        </div>
+                        <!-- /.widget-heading -->
+                        <div class="widget-body">
+                            <button type="button" id="sh_apr" onclick="Mudaestado('aprovadasapp');" class="btn btn-white" style="background-color: #f0f8ff; border-color:#fff ">APPROVED [ <span id="aprovada_conta">0</span> ]</button>
+
+                            <br>
+
+                            <p id="aprovadasapp"></p>
+
+                            <br><br>
+
+                            <button type="button" id="sh_rep" onclick="Mudaestado('reprovadasapp');" class="btn btn-00ced1"  style="background-color: pink; border-color:#000000">DECLINED [ <span id="reprovada_conta">0</span> ]</button>
+
+                            <br>
+
+                            <p id="reprovadasapp"></p>
+                        </div>
+                        <!-- /.widget-body -->
+                    </div>
+                    <!-- /.widget-bg -->
+                </div>
+                <!-- /.widget-holder -->
+                <div class="widget-holder widget-full-content widget-full-height col-lg-6">
+                    <div class="widget-bg">
+                        <div class="widget-heading">
+                            <h5 class="widget-title">CC HeRE SENPAI</h5>
+                            <div class="widget-graph-info">
+                                <div class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle text-muted fs-16" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a>  <a class="dropdown-item" href="#">Another action</a>  <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.widget-graph-info -->
+                        </div>
+                        <!-- .widget-heading -->
+                        <div class="widget-body">
+                            <div class="container-fluid pd-20">
+                                <div class="row">
+                                    <div class="col">
+                                        
+
+                                    <textarea id="lista" placeholder="0000000000000000|00|0000|000" class="form-control" style="resize:none;outline:none;width:250px; height:150px;"></textarea><br>
+
+                                    <button type="button" id="iniciar"  onclick="start()" class="btn btn-f0f8ff" style="background-color: #f0f8ff; border-color:#ffff">Start</button> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button type="button" onclick="stop()" id="parar" class="btn btn-danger" style="background-color: pink; border-color:#ffff" >Stop</button>
+
+                                    <br><br>
+
+                                    <small>STATUS: <span class="bagde badge-pill badge-primary" id="demo">WAITING FOR BEGINNING</span> - 
+                                    APPROVED: <span id="CLIVE" class="badge badge-success">0</span> - 
+                                    DECLINED: <span id="CDIE" class="badge badge-danger">0</span> - 
+                                    TESTED: <span id="testado" class="badge badge-pink">0</span> - 
+                                    TOTAL: <span id="carregada" class="badge badge-white">0</span></small>
+
+                                    <br><br>
+
+                                   Time: <span class="badge badge-primary" id="horas">NULL</span>
+
+                                    <br><br>
+
+                       
+
+
+                                            <!-- /.col-6 -->
+                                    </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.col-lg-6 -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.container-fluid -->
+                        </div>
+                        <!-- /.widget-body -->
+                    </div>
+                    <!-- /.widget-bg -->
+                </div>
+                <!-- /.widget-holder -->
+            </div>
+            <!-- /.widget-list -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.chat-panel -->
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- FOOTER -->
+    <footer>
+        <center>
+            EDITED BY :  <span class="badge badge-white">�ANONBD</span>
+        </center>
+    </footer>
+    </div>
+    <!--/ #wrapper -->
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js.js"></script>
+</body>
+
+</html>
