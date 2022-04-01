@@ -11,27 +11,31 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <style>.container{max-width:960px}.border-top{border-top:1px solid #e5e5e5}.border-bottom{border-bottom:1px solid #e5e5e5}.border-top-gray{border-top-color:#adb5bd}.box-shadow{box-shadow:0 .25rem .75rem rgba(0,0,0,.05)}.lh-condensed{line-height:1.25}</style>
+    <style>body{font-family: 'PT Serif', serif;}.container{max-width:960px}.border-top{border-top:1px solid #e5e5e5}.border-bottom{border-bottom:1px solid #e5e5e5}.border-top-gray{border-top-color:#adb5bd}.box-shadow{box-shadow:0 .25rem .75rem rgba(0,0,0,.05)}.lh-condensed{line-height:1.25}</style>
   </head>
 
   <body class="bg-light">
 
     <div class="container">
       <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="https://cdn.jsdelivr.net/gh/anonbd1/chdemo@master/associacao.svg" alt="" width="72" height="72">
+        <img class="d-block mx-auto mb-4" src="data:image/png;base64,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"/ alt="ANONBD" width="72" height="72">
         <h2>ANON CHECKER</h2>
-        <p class="lead">A NON Sk Checker By <kbd>@ANONBD</kbd>. Join Our Channel <kbd>@HackerBD1</kbd>. Enjoy CC Chacking.</p>
+        <p class="lead">A NON Sk Checker By <kbd>@ANONBD</kbd>. Join Our Channel @HackerBD1 Enjoy CC Chacking.</p>
       </div>
 
       <div class="row">
         <div class="col-md-4 order-md-2 mb-4">
           	<div class="form-outline">
           	<textarea class="form-control" id="lista" rows="7"></textarea>
+          <label class="form-label" for="textAreaExample"></label>
           </div>
-          <button type="button" id="iniciar"  onclick="start()" class="btn btn-info btn-lg btn-block">START</button>
-<button type="button" id="parar" onclick="stop()" class="btn btn-danger btn-lg btn-block">STOP</button>
+          <button type="button" id="iniciar"  onclick="start()" class="btn btn-success btn-lg">START</button>
+<button type="button" id="parar" onclick="stop()" class="btn btn-dark btn-lg">STOP</button>
 <br>
           	<small>STATUS: <span class="bagde badge-pill badge-primary" id="demo">WAITING FOR BEGINNING</span> - 
                                     APPROVED: <span id="CLIVE" class="badge badge-pill badge-success">0</span> - 
