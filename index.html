@@ -7,13 +7,13 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Checkout example for Bootstrap</title>
+    <title>ANON CHECKER</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="form-validation.css" rel="stylesheet">
+    <style>.container{max-width:960px}.border-top{border-top:1px solid #e5e5e5}.border-bottom{border-bottom:1px solid #e5e5e5}.border-top-gray{border-top-color:#adb5bd}.box-shadow{box-shadow:0 .25rem .75rem rgba(0,0,0,.05)}.lh-condensed{line-height:1.25}</style>
   </head>
 
   <body class="bg-light">
@@ -21,14 +21,13 @@
     <div class="container">
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h2>Checkout form</h2>
-        <p class="lead">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        <h2>ANON CHECKER</h2>
+        <p class="lead">A NON Sk Checker By <kbd>@ANONBD</kbd>. Join Our Channel <kbd>@HackerBD1</kbd>. Enjoy CC Chacking.</p>
       </div>
 
       <div class="row">
-        <div class="col-lg-6">
-          
-          	<textarea id="lista" placeholder="0000000000000000|00|0000|000" class="form-control" style="resize:none;outline:none;width:250px; height:150px;"></textarea><br>
+        <div class="col-md-4 order-md-2 mb-4">
+          	<textarea class="needs-validation" id="lista" placeholder="0000000000000000|00|0000|000" class="form-control" rows="3"></textarea><br>
           	<button type="button" id="iniciar"  onclick="start()" class="btn btn-info">Start</button>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <button type="button" onclick="stop()" id="parar" class="btn btn-dark">Stop</button>
@@ -41,17 +40,26 @@
 
                                     <br><br>
 
-                                   Time: <span class="badge badge-primary" id="horas">NULL</span>
+                                   Time: <span class="badge badge-info" id="horas">NULL</span>
                  <br><br>
-                 <button id="sh_rep" onclick="Mudaestado('reprovadasapp');" type="button" class="btn btn-warning">
-  DECLINED <span id="reprovada_conta" class="badge badge-light">0</span>
-</button>
-<p id="reprovadasapp"></p>
-<br><br>
-	<button id="sh_apr" onclick="Mudaestado('aprovadasapp');" type="button" class="btn btn-success">
-  APPROVED <span id="aprovada_conta" class="badge badge-light">0</span>
-</button>
-<p id="aprovadasapp"></p>
+                 <p>
+  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#aprovad" aria-expanded="false" aria-controls="collapseExample">
+APPROVED <span id="aprovada_conta" class="badge badge-light">0</span>
+  </button>
+  <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#reprovad" aria-expanded="false" aria-controls="collapseExample">
+    DECLINED <span id="reprovada_conta" class="badge badge-light">0</span>
+  </button>
+</p>
+<div class="collapse" id="aprovad">
+  <div class="card card-body">
+    <p id="aprovadasapp"></p>
+  </div>
+</div>
+<div class="collapse" id="reprovad">
+  <div class="card card-body">
+    <p id="reprovadasapp"></p>
+  </div>
+</div>
           </div>
           </div>
 
@@ -68,33 +76,12 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../../../assets/js/vendor/holder.min.js"></script>
     <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
-
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
+    	function myTimer(){var e=new Date;document.getElementById("horas").innerHTML=e.toLocaleTimeString()}function Mudaestado(e){var t=document.getElementById(e).style.display;document.getElementById(e).style.display="none"==t?"block":"none"}!function(){"use strict";window.addEventListener("load",function(){var e=document.getElementsByClassName("needs-validation");Array.prototype.filter.call(e,function(e){e.addEventListener("submit",function(t){!1===e.checkValidity()&&(t.preventDefault(),t.stopPropagation()),e.classList.add("was-validated")},!1)})},!1)}(),myVar=setInterval(function(){myTimer()},1e3);
     </script>
   </body>
 </html>
