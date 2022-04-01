@@ -27,11 +27,14 @@
 
       <div class="row">
         <div class="col-md-4 order-md-2 mb-4">
-          	<textarea class="needs-validation" id="lista" placeholder="0000000000000000|00|0000|000" class="form-control" rows="3"></textarea><br>
+          	<div class="form-outline">
+          	<textarea class="form-control" id="lista" rows="4"></textarea>
+          <label class="form-label" for="textAreaExample">0000000000000000|00|0000|000</label>
+          </div>
+          <p>
           	<button type="button" id="iniciar"  onclick="start()" class="btn btn-info">Start</button>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <button type="button" onclick="stop()" id="parar" class="btn btn-dark">Stop</button>
-          <br><br>
+          </p><br>
           	<small>STATUS: <span class="bagde badge-pill badge-primary" id="demo">WAITING FOR BEGINNING</span> - 
                                     APPROVED: <span id="CLIVE" class="badge badge-success">0</span> - 
                                     DECLINED: <span id="CDIE" class="badge badge-danger">0</span> - 
